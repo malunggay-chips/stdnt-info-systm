@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="logo">
+        <h2>Student Portal</h2>
+      </div>
+      <nav>
+        <ul>
+          <li class="active"><a href="#" onclick="showSection('dashboard')">📊 Dashboard</a></li>
+          <li><a href="#" onclick="showSection('profile')">👤 Student Profile</a></li>
+          <li><a href="#" onclick="showSection('subjects')">📘 Subjects</a></li>
+          <li><a href="#" onclick="showSection('schedule')">🕒 Class Schedule</a></li>
+          <li><a href="#" onclick="showSection('grades')">📄 Grades & Records</a></li>
+          <li><a href="#" onclick="showSection('requirements')">📎 Requirements</a></li>
+          <li><a href="#" onclick="showSection('payments')">💰 Account & Payments</a></li>
+          <li><a href="#" onclick="showSection('clearance')">✅ Clearance</a></li>
+          <li><a href="#" onclick="showSection('help')">🆘 Help & Support</a></li>
+          <li><a href="#" onclick="showSection('feedback')">💬 Feedback</a></li>
+          <li><a href="#" onclick="showSection('settings')">⚙️ Settings</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      <header>
+        <div class="student-info">
+          <h3 id="studentName">Student Name</h3>
+          <p>BS Information Technology - Fourth Year</p>
+        </div>
+        <div>
+          <button id="toggle-theme">🌙</button>
+          <button id="logoutBtn">Logout</button>
+        </div>
+      </header>
+
+      <!-- DASHBOARD -->
+      <section id="dashboard" class="section active">
+        <h2>Student Dashboard</h2>
+        <div class="actions">
+          <button>Upload Requirements</button>
+          <button>Make Payment</button>
+          <button>View Grades</button>
+          <button>Check Schedule</button>
+        </div>
+
+        <div class="stats">
+          <div class="card"><h3>14</h3><p>Total Units</p></div>
+          <div class="card"><h3>3.25</h3><p>Current GPA</p></div>
+          <div class="card"><h3>3</h3><p>Pending Requirements</p></div>
+          <div class="card"><h3>₱0.00</h3><p>Balance Due</p></div>
+        </div>
+
+        <div class="announcements">
+          <h3>Recent Announcements</h3>
+          <div class="announcement">
+            <h4>Final Examination Schedule</h4>
+            <p>The final examination schedule for the First Term has been posted. Please check your student portal for details.</p>
+            <small>Posted: October 15, 2025</small>
+          </div>
+          <div class="announcement">
+            <h4>Graduation Application</h4>
+            <p>Graduation application for the 2025–2026 academic year is now open. Deadline for submission is November 30, 2025.</p>
+            <small>Posted: October 10, 2025</small>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROFILE SECTION -->
+      <section id="profile" class="section">
+        <h2>Student Profile</h2>
+        <div class="profile-card">
+          <img id="profilePhoto" src="https://via.placeholder.com/120" alt="Profile Photo" />
+          <input type="file" id="uploadPhoto" accept="image/*" />
+          <h3 id="profileName">Your Name</h3>
+          <p id="profileEmail">your@email.com</p>
+          <button id="editProfile">Edit Info</button>
+        </div>
+
+        <div id="editForm" class="hidden">
+          <input type="text" id="editName" placeholder="New Name" />
+          <input type="email" id="editEmail" placeholder="New Email" />
+          <button id="saveProfile">Save</button>
+        </div>
+      </section>
+
+      <section id="subjects" class="section"><h2>Subjects</h2><p>List of enrolled subjects here.</p></section>
+      <section id="schedule" class="section"><h2>Class Schedule</h2><p>Weekly schedule here.</p></section>
+      <section id="grades" class="section"><h2>Grades & Records</h2><p>Grades per subject and term.</p></section>
+      <section id="requirements" class="section"><h2>Requirements</h2><p>Pending and submitted requirements listed here.</p></section>
+      <section id="payments" class="section"><h2>Account & Payments</h2><p>View fees and payment history here.</p></section>
+      <section id="clearance" class="section"><h2>Clearance</h2><p>Check clearance status here.</p></section>
+      <section id="help" class="section"><h2>Help & Support</h2><p>Contact IT support or submit a ticket.</p></section>
+      <section id="feedback" class="section"><h2>Feedback</h2><p>Submit feedback and suggestions.</p></section>
+      <section id="settings" class="section"><h2>Settings</h2><p>Customize your portal settings here.</p></section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
