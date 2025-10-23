@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Student Information System</title>
+  <title>Student Portal</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Student Information System</h1>
-  </header>
-
   <div id="auth-section" class="auth-container">
     <h2>Welcome</h2>
     <div class="auth-buttons">
@@ -19,7 +15,7 @@
     </div>
 
     <form id="signup-form" class="hidden">
-      <h3>Sign Up</h3>
+      <h3>Create Account</h3>
       <input type="text" placeholder="Full Name" required>
       <input type="email" placeholder="Email" required>
       <input type="password" placeholder="Password" required>
@@ -66,14 +62,9 @@
 
       <main class="main-content">
         <section id="dashboard" class="section active">
-          <div class="announcement-board">
-            <img src="https://via.placeholder.com/1200x300?text=School+Announcements" alt="Announcements">
-            <div class="overlay-text">Announcements</div>
-          </div>
-          <div class="dashboard-stats">
-            <div class="card"><h3>Enrolled Units</h3><p>21 Units</p></div>
-            <div class="card"><h3>Account Balance</h3><p>$450 Remaining</p></div>
-            <div class="card"><h3>Clearance</h3><p>Pending</p></div>
+          <div class="announcement-banner">
+            <img src="https://via.placeholder.com/1200x400?text=Announcements" alt="Announcements">
+            <div class="announcement-text">Announcements</div>
           </div>
         </section>
 
@@ -99,7 +90,6 @@
               <tr><td>CS101</td><td>Intro to Programming</td><td>3</td><td>Prof. Smith</td></tr>
               <tr><td>CS102</td><td>Web Development</td><td>3</td><td>Prof. Johnson</td></tr>
               <tr><td>CS103</td><td>Data Structures</td><td>3</td><td>Prof. Lee</td></tr>
-              <tr><td>CS104</td><td>Discrete Math</td><td>3</td><td>Prof. Chen</td></tr>
             </table>
           </div>
         </section>
@@ -112,7 +102,6 @@
               <tr><td>Mon</td><td>8:00-10:00</td><td>CS101</td><td>Lab 1</td></tr>
               <tr><td>Tue</td><td>10:00-12:00</td><td>CS102</td><td>Room 305</td></tr>
               <tr><td>Wed</td><td>1:00-3:00</td><td>CS103</td><td>Lab 2</td></tr>
-              <tr><td>Thu</td><td>8:00-10:00</td><td>CS104</td><td>Room 210</td></tr>
             </table>
           </div>
         </section>
@@ -130,44 +119,51 @@
         </section>
 
         <section id="requirements" class="section">
-          <div class="card">
-            <h3>Requirements</h3>
-            <ul>
-              <li>Birth Certificate – ✅ Submitted</li>
-              <li>Form 138 – ⚠️ Pending</li>
-              <li>Good Moral – ✅ Submitted</li>
-              <li>Medical Certificate – ⚠️ Missing</li>
-            </ul>
+          <div class="card-group">
+            <div class="req-card">✔️ Birth Certificate - Submitted</div>
+            <div class="req-card">⏳ Form 138 - Pending</div>
+            <div class="req-card">✔️ Good Moral - Submitted</div>
+            <div class="req-card">⚠️ Medical Certificate - Missing</div>
           </div>
         </section>
 
         <section id="payments" class="section">
           <div class="card">
-            <h3>Account & Payments</h3>
+            <h3>Tuition Fee Installment</h3>
+            <table>
+              <tr><th>Payment Type</th><th>Amount</th><th>Status</th></tr>
+              <tr><td>Down Payment</td><td>$300</td><td>Paid</td></tr>
+              <tr><td>1st Month</td><td>$225</td><td>Pending</td></tr>
+              <tr><td>2nd Month</td><td>$225</td><td>Pending</td></tr>
+              <tr><td>3rd Month</td><td>$225</td><td>Pending</td></tr>
+              <tr><td>4th Month</td><td>$225</td><td>Pending</td></tr>
+              <tr><td><strong>Total</strong></td><td><strong>$1,200</strong></td><td>--</td></tr>
+            </table>
+          </div>
+
+          <div class="card">
+            <h3>Other Fees</h3>
             <table>
               <tr><th>Fee</th><th>Amount</th><th>Status</th></tr>
-              <tr><td>Tuition (Installment)</td><td>$1,200</td><td>Pending</td></tr>
               <tr><td>Uniform</td><td>$75</td><td>Unpaid</td></tr>
               <tr><td>Educational Tour</td><td>$150</td><td>Unpaid</td></tr>
               <tr><td>Event Fee</td><td>$40</td><td>Unpaid</td></tr>
-              <tr><td>Library Fee</td><td>$25</td><td>Paid</td></tr>
             </table>
           </div>
         </section>
 
         <section id="clearance" class="section">
-          <div class="card">
-            <h3>Clearance</h3>
-            <p>Registrar: Pending</p>
-            <p>Library: Cleared</p>
-            <p>Cashier: Pending (Balance Remaining)</p>
+          <div class="card-group">
+            <div class="req-card">⏳ Registrar - Pending</div>
+            <div class="req-card">✔️ Library - Cleared</div>
+            <div class="req-card">⚠️ Cashier - Payment Due</div>
           </div>
         </section>
 
         <section id="enrollment" class="section">
           <div class="card">
             <h3>Enrollment</h3>
-            <p>Next Enrollment Period: July 15 - August 10, 2025</p>
+            <p>Next Enrollment: July 15 - August 10, 2025</p>
             <button>Proceed to Pre-Enrollment</button>
           </div>
         </section>
@@ -188,7 +184,6 @@
             <h3>Help & Support</h3>
             <p>Email: <strong>support@university.edu</strong></p>
             <p>Hotline: <strong>(02) 123-4567</strong></p>
-            <p>Office Hours: Monday - Friday, 8AM - 5PM</p>
           </div>
         </section>
 
@@ -196,26 +191,25 @@
           <div class="card">
             <h3>Feedback</h3>
             <textarea placeholder="Write your feedback here..."></textarea>
-            <button>Submit</button>
+            <div class="center"><button>Submit</button></div>
           </div>
         </section>
 
         <section id="settings" class="section">
           <div class="card">
             <h3>Settings</h3>
-            <p>Theme: Light Mode</p>
-            <p>Language: English</p>
-            <button>Change Preferences</button>
+            <label class="switch">
+              <input type="checkbox" id="theme-toggle">
+              <span class="slider"></span>
+            </label>
+            <p>Toggle Dark/Light Mode</p>
           </div>
         </section>
       </main>
     </div>
   </div>
 
-  <footer>
-    <p>&copy; 2025 Student Information System</p>
-  </footer>
-
+  <footer><p>&copy; 2025 Student Information System</p></footer>
   <script src="script.js"></script>
 </body>
 </html>
