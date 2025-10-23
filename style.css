@@ -17,21 +17,24 @@ body.dark {
 }
 
 header, footer {
-  background-color: #000;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
+  border-bottom: 4px solid #000;
   padding: 15px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-header h1, footer p {
-  margin: 0;
+footer {
+  border-top: 4px solid #000;
+  border-bottom: none;
+  text-align: center;
 }
 
 .user-info button {
-  background-color: #fff;
-  color: #000;
+  background-color: #000;
+  color: #fff;
   border: none;
   padding: 6px 12px;
   cursor: pointer;
@@ -42,7 +45,7 @@ header h1, footer p {
   text-align: center;
   background: #fff;
   color: #000;
-  border: 2px solid #000;
+  border: 3px solid #000;
   border-radius: 10px;
   width: 400px;
   margin: 100px auto;
@@ -69,17 +72,22 @@ header h1, footer p {
 .container {
   display: flex;
   min-height: 80vh;
+  border-top: 4px solid #000;
+  border-bottom: 4px solid #000;
 }
 
 .sidebar {
   width: 250px;
-  background-color: #000;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
+  border-right: 4px solid #000;
   padding: 20px;
 }
 
 .sidebar h2 {
   margin-bottom: 15px;
+  border-bottom: 3px solid #000;
+  padding-bottom: 5px;
 }
 
 .sidebar nav ul {
@@ -91,8 +99,9 @@ header h1, footer p {
 }
 
 .sidebar nav ul li a {
-  color: #fff;
+  color: #000;
   text-decoration: none;
+  font-weight: 500;
 }
 
 .sidebar nav ul li.active a {
@@ -129,8 +138,8 @@ textarea {
   padding: 10px;
 }
 
-footer {
-  text-align: center;
+footer p {
+  margin: 0;
 }
 
 /* Responsive Design */
@@ -141,7 +150,8 @@ footer {
 
   .sidebar {
     width: 100%;
-    border-bottom: 2px solid #222;
+    border-right: none;
+    border-bottom: 4px solid #000;
     display: flex;
     flex-direction: row;
     overflow-x: auto;
