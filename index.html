@@ -2,66 +2,64 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Student Information System</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <section id="auth-section">
-    <div class="auth-container" id="authChoice">
-      <h1>Student Information System</h1>
-      <div class="auth-buttons">
-        <button id="loginChoice">Log In</button>
-        <button id="signupChoice">Sign Up</button>
-      </div>
+  <header>
+    <h1>Student Information System</h1>
+  </header>
+
+  <div id="auth-section" class="auth-container">
+    <h2>Welcome</h2>
+    <div class="auth-buttons">
+      <button id="show-login">Log In</button>
+      <button id="show-signup">Sign Up</button>
     </div>
 
-    <div class="auth-container hidden" id="signupForm">
-      <h2>Create Account</h2>
-      <input type="text" id="signupName" placeholder="Full Name" required />
-      <input type="email" id="signupEmail" placeholder="Email" required />
-      <input type="password" id="signupPassword" placeholder="Password" required />
-      <button id="signupBtn">Sign Up</button>
-      <button class="back" id="backToMain1">Back</button>
-    </div>
+    <form id="signup-form" class="hidden">
+      <h3>Sign Up</h3>
+      <input type="text" id="signup-name" placeholder="Full Name" required>
+      <input type="email" id="signup-email" placeholder="Email" required>
+      <input type="password" id="signup-password" placeholder="Password" required>
+      <button type="submit">Sign Up</button>
+    </form>
 
-    <div class="auth-container hidden" id="loginForm">
-      <h2>Log In</h2>
-      <input type="text" id="loginStudentNo" placeholder="Student Number" required />
-      <input type="email" id="loginEmail" placeholder="Email" required />
-      <input type="password" id="loginPassword" placeholder="Password" required />
-      <button id="loginBtn">Log In</button>
-      <button class="back" id="backToMain2">Back</button>
-    </div>
-  </section>
+    <form id="login-form" class="hidden">
+      <h3>Log In</h3>
+      <input type="text" id="login-student" placeholder="Student Number" required>
+      <input type="email" id="login-email" placeholder="Email" required>
+      <input type="password" id="login-password" placeholder="Password" required>
+      <button type="submit">Log In</button>
+    </form>
+  </div>
 
-  <section id="portal" class="hidden">
+  <div id="portal" class="hidden">
     <header>
-      <h1>Student Information System</h1>
-      <div class="user-info">
-        <span id="studentName"></span>
-        <button id="logoutBtn">Logout</button>
-      </div>
+      <h1>Student Portal</h1>
+      <button id="logout-btn">Log Out</button>
+      <button id="menu-toggle" class="menu-toggle">☰</button>
     </header>
 
     <div class="container">
-      <aside class="sidebar">
+      <aside class="sidebar" id="sidebar">
         <h2>Navigation</h2>
         <nav>
           <ul>
-            <li class="active"><a href="#" onclick="showSection('dashboard')">📊 Dashboard</a></li>
-            <li><a href="#" onclick="showSection('profile')">👤 Student Profile</a></li>
-            <li><a href="#" onclick="showSection('subjects')">📘 Subjects</a></li>
-            <li><a href="#" onclick="showSection('schedule')">🕒 Class Schedule</a></li>
-            <li><a href="#" onclick="showSection('grades')">📄 Grades & Records</a></li>
-            <li><a href="#" onclick="showSection('requirements')">📎 Requirements</a></li>
-            <li><a href="#" onclick="showSection('payments')">💰 Account & Payments</a></li>
-            <li><a href="#" onclick="showSection('enrollment')">🧾 Enrollment</a></li>
-            <li><a href="#" onclick="showSection('store')">🏫 University Store</a></li>
-            <li><a href="#" onclick="showSection('clearance')">✅ Clearance</a></li>
-            <li><a href="#" onclick="showSection('help')">🆘 Help & Support</a></li>
-            <li><a href="#" onclick="showSection('feedback')">💬 Feedback</a></li>
-            <li><a href="#" onclick="showSection('settings')">⚙️ Settings</a></li>
+            <li class="active"><a href="#" data-section="dashboard">📊 Dashboard</a></li>
+            <li><a href="#" data-section="profile">👤 Student Profile</a></li>
+            <li><a href="#" data-section="subjects">📘 Subjects</a></li>
+            <li><a href="#" data-section="schedule">🕒 Class Schedule</a></li>
+            <li><a href="#" data-section="grades">📄 Grades & Records</a></li>
+            <li><a href="#" data-section="requirements">📎 Requirements</a></li>
+            <li><a href="#" data-section="payments">💰 Account & Payments</a></li>
+            <li><a href="#" data-section="clearance">✅ Clearance</a></li>
+            <li><a href="#" data-section="enrollment">🧾 Enrollment</a></li>
+            <li><a href="#" data-section="store">🛍️ University Store</a></li>
+            <li><a href="#" data-section="help">🆘 Help & Support</a></li>
+            <li><a href="#" data-section="feedback">💬 Feedback</a></li>
+            <li><a href="#" data-section="settings">⚙️ Settings</a></li>
           </ul>
         </nav>
       </aside>
@@ -69,79 +67,76 @@
       <main class="main-content">
         <section id="dashboard" class="section active">
           <div class="announcement-board">
-            <img src="https://images.unsplash.com/photo-1581091215367-59ab6b6b76a9?auto=format&fit=crop&w=1000&q=60" alt="Announcements">
+            <img src="https://via.placeholder.com/1200x300?text=School+Announcements" alt="Announcements">
             <div class="overlay-text">Announcements</div>
-          </div>
-          <div class="announcement-gallery">
-            <img src="https://images.unsplash.com/photo-1600195077913-8a9ed3f5c2d2?auto=format&fit=crop&w=1000&q=60">
-            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1000&q=60">
-            <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=1000&q=60">
-            <img src="https://images.unsplash.com/photo-1600566752839-69e930121e2b?auto=format&fit=crop&w=1000&q=60">
           </div>
         </section>
 
         <section id="profile" class="section">
-          <h2>Student Profile</h2>
           <div class="profile-card">
-            <img src="https://i.pravatar.cc/150?img=12" alt="Student Photo">
-            <div class="profile-info">
-              <h3 id="profileName">Student Name</h3>
-              <p><strong>Student Number:</strong> 2025-00123</p>
-              <p><strong>Course:</strong> BS Information Technology</p>
-              <p><strong>Year Level:</strong> 3rd Year</p>
-              <p><strong>Email:</strong> student@email.com</p>
+            <img src="https://via.placeholder.com/150" alt="Profile">
+            <div>
+              <h3>John Doe</h3>
+              <p>Student Number: 2025-0001</p>
+              <p>Course: BS Computer Science</p>
             </div>
           </div>
         </section>
 
         <section id="subjects" class="section">
-          <h2>Subjects</h2>
-          <div class="table-container">
+          <div class="card">
+            <h3>Enrolled Subjects</h3>
+            <div class="table-container">
+              <table>
+                <tr><th>Subject Code</th><th>Title</th><th>Units</th></tr>
+                <tr><td>CS101</td><td>Intro to Programming</td><td>3</td></tr>
+                <tr><td>CS102</td><td>Web Development</td><td>3</td></tr>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section id="payments" class="section">
+          <div class="card">
+            <h3>Account & Payments</h3>
             <table>
-              <tr><th>Code</th><th>Subject</th><th>Units</th></tr>
-              <tr><td>IT301</td><td>Web Development</td><td>3</td></tr>
-              <tr><td>IT302</td><td>Database Systems</td><td>3</td></tr>
-              <tr><td>IT303</td><td>Information Security</td><td>3</td></tr>
-              <tr><td>IT304</td><td>HCI</td><td>2</td></tr>
-              <tr><td>IT305</td><td>System Analysis</td><td>3</td></tr>
+              <tr><th>Fee</th><th>Amount</th><th>Status</th></tr>
+              <tr><td>Tuition Fee (Installment)</td><td>$1,200</td><td>Pending</td></tr>
+              <tr><td>Uniform</td><td>$75</td><td>Unpaid</td></tr>
+              <tr><td>Educational Tour</td><td>$150</td><td>Unpaid</td></tr>
+              <tr><td>Event Fee</td><td>$40</td><td>Unpaid</td></tr>
             </table>
           </div>
         </section>
 
-        <section id="enrollment" class="section">
-          <h2>Enrollment</h2>
-          <div class="card">
-            <p><strong>Enrollment Status:</strong> Open for 2nd Semester 2025</p>
-            <p><strong>Deadline:</strong> November 30, 2025</p>
-            <p><strong>Requirements:</strong> Clearance, Payment Receipt, Adviser Approval</p>
-            <button>Proceed to Enroll</button>
-          </div>
-          <div class="card">
-            <h3>Enrollment Steps</h3>
-            <ol>
-              <li>Update your profile information</li>
-              <li>Submit pending requirements</li>
-              <li>Pay your outstanding balances</li>
-              <li>Wait for adviser approval</li>
-              <li>Print your enrollment form</li>
-            </ol>
-          </div>
-        </section>
-
         <section id="store" class="section">
-          <h2>University Store</h2>
-          <div class="store-grid" id="storeItems"></div>
-          <h3>🛒 Your Cart</h3>
-          <div id="cart"></div>
-          <div id="cartTotal"></div>
+          <h3>University Store</h3>
+          <div class="store-grid">
+            <div class="item">
+              <img src="https://via.placeholder.com/250x250?text=Jersey" alt="">
+              <p>University Jersey - $30</p>
+            </div>
+            <div class="item">
+              <img src="https://via.placeholder.com/250x250?text=Hoodie" alt="">
+              <p>University Hoodie - $45</p>
+            </div>
+            <div class="item">
+              <img src="https://via.placeholder.com/250x250?text=T-Shirt" alt="">
+              <p>University T-Shirt - $20</p>
+            </div>
+            <div class="item">
+              <img src="https://via.placeholder.com/250x250?text=Cap" alt="">
+              <p>University Cap - $15</p>
+            </div>
+          </div>
         </section>
       </main>
     </div>
+  </div>
 
-    <footer>
-      <p>© 2025 Student Information System</p>
-    </footer>
-  </section>
+  <footer>
+    <p>&copy; 2025 Student Information System</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
