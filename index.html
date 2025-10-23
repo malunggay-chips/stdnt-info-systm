@@ -13,17 +13,21 @@
       <button id="show-login">Log In</button>
       <button id="show-signup">Sign Up</button>
     </div>
+  </div>
 
-    <form id="signup-form" class="hidden">
-      <h3>Create Account</h3>
+  <div id="signup-form" class="form-container hidden">
+    <h3>Create Account</h3>
+    <form>
       <input type="text" placeholder="Full Name" required>
       <input type="email" placeholder="Email" required>
       <input type="password" placeholder="Password" required>
       <button type="submit">Sign Up</button>
     </form>
+  </div>
 
-    <form id="login-form" class="hidden">
-      <h3>Log In</h3>
+  <div id="login-form" class="form-container hidden">
+    <h3>Log In</h3>
+    <form>
       <input type="text" placeholder="Student Number" required>
       <input type="email" placeholder="Email" required>
       <input type="password" placeholder="Password" required>
@@ -63,22 +67,18 @@
       <main class="main-content">
         <section id="dashboard" class="section active">
           <div class="announcement-banner">
-            <img src="https://via.placeholder.com/1200x400?text=Announcements" alt="Announcements">
+            <img src="https://via.placeholder.com/1200x300?text=School+Announcements" alt="Announcements">
             <div class="announcement-text">Announcements</div>
           </div>
         </section>
 
         <section id="profile" class="section">
-          <div class="profile-card">
-            <img src="https://via.placeholder.com/150" alt="Profile">
-            <div>
-              <h3>John Doe</h3>
-              <p>Student Number: 2025-0001</p>
-              <p>Course: BS Computer Science</p>
-              <p>Year Level: 2nd Year</p>
-              <p>Email: johndoe@email.com</p>
-              <button>Edit Profile</button>
-            </div>
+          <div class="card">
+            <h3>Student Profile</h3>
+            <p>Name: John Doe</p>
+            <p>Student No: 2025-0001</p>
+            <p>Course: BS Computer Science</p>
+            <p>Year Level: 2nd Year</p>
           </div>
         </section>
 
@@ -86,34 +86,10 @@
           <div class="card">
             <h3>Enrolled Subjects</h3>
             <table>
-              <tr><th>Code</th><th>Title</th><th>Units</th><th>Instructor</th></tr>
-              <tr><td>CS101</td><td>Intro to Programming</td><td>3</td><td>Prof. Smith</td></tr>
-              <tr><td>CS102</td><td>Web Development</td><td>3</td><td>Prof. Johnson</td></tr>
-              <tr><td>CS103</td><td>Data Structures</td><td>3</td><td>Prof. Lee</td></tr>
-            </table>
-          </div>
-        </section>
-
-        <section id="schedule" class="section">
-          <div class="card">
-            <h3>Class Schedule</h3>
-            <table>
-              <tr><th>Day</th><th>Time</th><th>Subject</th><th>Room</th></tr>
-              <tr><td>Mon</td><td>8:00-10:00</td><td>CS101</td><td>Lab 1</td></tr>
-              <tr><td>Tue</td><td>10:00-12:00</td><td>CS102</td><td>Room 305</td></tr>
-              <tr><td>Wed</td><td>1:00-3:00</td><td>CS103</td><td>Lab 2</td></tr>
-            </table>
-          </div>
-        </section>
-
-        <section id="grades" class="section">
-          <div class="card">
-            <h3>Grades & Records</h3>
-            <table>
-              <tr><th>Subject</th><th>Midterm</th><th>Final</th><th>Remarks</th></tr>
-              <tr><td>CS101</td><td>88</td><td>92</td><td>Passed</td></tr>
-              <tr><td>CS102</td><td>90</td><td>94</td><td>Passed</td></tr>
-              <tr><td>CS103</td><td>85</td><td>91</td><td>Passed</td></tr>
+              <tr><th>Code</th><th>Title</th><th>Units</th></tr>
+              <tr><td>CS101</td><td>Programming</td><td>3</td></tr>
+              <tr><td>CS102</td><td>Web Dev</td><td>3</td></tr>
+              <tr><td>CS103</td><td>Data Structures</td><td>3</td></tr>
             </table>
           </div>
         </section>
@@ -122,7 +98,6 @@
           <div class="card-group">
             <div class="req-card">✔️ Birth Certificate - Submitted</div>
             <div class="req-card">⏳ Form 138 - Pending</div>
-            <div class="req-card">✔️ Good Moral - Submitted</div>
             <div class="req-card">⚠️ Medical Certificate - Missing</div>
           </div>
         </section>
@@ -131,59 +106,21 @@
           <div class="card">
             <h3>Tuition Fee Installment</h3>
             <table>
-              <tr><th>Payment Type</th><th>Amount</th><th>Status</th></tr>
+              <tr><th>Payment</th><th>Amount</th><th>Status</th></tr>
               <tr><td>Down Payment</td><td>$300</td><td>Paid</td></tr>
               <tr><td>1st Month</td><td>$225</td><td>Pending</td></tr>
               <tr><td>2nd Month</td><td>$225</td><td>Pending</td></tr>
-              <tr><td>3rd Month</td><td>$225</td><td>Pending</td></tr>
-              <tr><td>4th Month</td><td>$225</td><td>Pending</td></tr>
-              <tr><td><strong>Total</strong></td><td><strong>$1,200</strong></td><td>--</td></tr>
+              <tr><td><strong>Total</strong></td><td><strong>$750</strong></td><td></td></tr>
             </table>
           </div>
-
           <div class="card">
             <h3>Other Fees</h3>
             <table>
-              <tr><th>Fee</th><th>Amount</th><th>Status</th></tr>
-              <tr><td>Uniform</td><td>$75</td><td>Unpaid</td></tr>
-              <tr><td>Educational Tour</td><td>$150</td><td>Unpaid</td></tr>
-              <tr><td>Event Fee</td><td>$40</td><td>Unpaid</td></tr>
+              <tr><th>Fee</th><th>Amount</th></tr>
+              <tr><td>Uniform</td><td>$75</td></tr>
+              <tr><td>Educational Tour</td><td>$150</td></tr>
+              <tr><td>Event Fee</td><td>$40</td></tr>
             </table>
-          </div>
-        </section>
-
-        <section id="clearance" class="section">
-          <div class="card-group">
-            <div class="req-card">⏳ Registrar - Pending</div>
-            <div class="req-card">✔️ Library - Cleared</div>
-            <div class="req-card">⚠️ Cashier - Payment Due</div>
-          </div>
-        </section>
-
-        <section id="enrollment" class="section">
-          <div class="card">
-            <h3>Enrollment</h3>
-            <p>Next Enrollment: July 15 - August 10, 2025</p>
-            <button>Proceed to Pre-Enrollment</button>
-          </div>
-        </section>
-
-        <section id="store" class="section">
-          <h3>University Store</h3>
-          <div class="store-grid">
-            <div class="item"><img src="https://via.placeholder.com/250?text=Jersey" alt=""><p>University Jersey - $30</p></div>
-            <div class="item"><img src="https://via.placeholder.com/250?text=Hoodie" alt=""><p>University Hoodie - $45</p></div>
-            <div class="item"><img src="https://via.placeholder.com/250?text=T-Shirt" alt=""><p>University T-Shirt - $20</p></div>
-            <div class="item"><img src="https://via.placeholder.com/250?text=Cap" alt=""><p>University Cap - $15</p></div>
-            <div class="item"><img src="https://via.placeholder.com/250?text=Jacket" alt=""><p>University Jacket - $55</p></div>
-          </div>
-        </section>
-
-        <section id="help" class="section">
-          <div class="card">
-            <h3>Help & Support</h3>
-            <p>Email: <strong>support@university.edu</strong></p>
-            <p>Hotline: <strong>(02) 123-4567</strong></p>
           </div>
         </section>
 
@@ -191,7 +128,7 @@
           <div class="card">
             <h3>Feedback</h3>
             <textarea placeholder="Write your feedback here..."></textarea>
-            <div class="center"><button>Submit</button></div>
+            <button>Submit</button>
           </div>
         </section>
 
