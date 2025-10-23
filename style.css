@@ -1,350 +1,52 @@
-/* ======= GLOBAL RESET ======= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
-body {
-  background-color: #ffffff;
-  color: #000000;
-  transition: background 0.3s, color 0.3s;
-}
-
-.container {
-  display: flex;
-  height: 100vh;
-}
-
-/* ======= SIDEBAR ======= */
-.sidebar {
-  width: 240px;
-  background-color: #000000;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  border-right: 3px solid #222;
-}
-
-.sidebar h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: white;
-}
-
-.sidebar nav ul {
-  list-style: none;
-}
-
-.sidebar nav ul li {
-  margin: 10px 0;
-}
-
-.sidebar nav ul li a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 14px;
-  display: block;
-  border-radius: 6px;
-  transition: 0.3s;
-}
-
-.sidebar nav ul li.active a,
-.sidebar nav ul li a:hover {
-  background-color: #ffffff;
-  color: #000000;
-  transform: translateX(5px);
-}
-
-/* ======= MAIN CONTENT ======= */
-.main-content {
-  flex: 1;
-  padding: 20px;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-}
-
-/* ======= HEADER ======= */
-header {
-  background-color: #000000;
-  color: #ffffff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 25px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-header button {
-  background: #000000;
-  color: #ffffff;
-  border: 2px solid #ffffff;
-  padding: 8px 14px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-header button:hover {
-  background: #ffffff;
-  color: #000000;
-  box-shadow: 0 0 8px #000000;
-}
-
-/* ======= BUTTONS ======= */
-button {
-  background: #000000;
-  color: white;
-  border: none;
-  padding: 10px 18px;
-  margin: 10px 5px 0 0;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-button:hover {
-  background: #ffffff;
-  color: #000000;
-  border: 2px solid #000000;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-/* ======= DASHBOARD ======= */
-.stats {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-}
-
-.card {
-  background: #ffffff;
-  flex: 1;
-  min-width: 180px;
-  padding: 20px;
-  border-radius: 12px;
-  text-align: center;
-  border: 2px solid #000000;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-}
-
-.announcements {
-  background: #ffffff;
-  padding: 20px;
-  border-radius: 10px;
-  border: 2px solid #000000;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-}
-
-.announcement {
-  margin-bottom: 15px;
-  border-left: 4px solid #000000;
-  padding-left: 10px;
-}
-
-/* ======= TABLE STYLING ======= */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 15px;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-thead {
-  background-color: #000000;
-  color: white;
-}
-
-th,
-td {
-  padding: 12px;
-  text-align: center;
-  border-bottom: 1px solid #ddd;
-}
-
-tbody tr:nth-child(even) {
-  background-color: #f5f5f5;
-}
-
-tbody tr:hover {
-  background-color: #e0e0e0;
-  transition: 0.3s;
-}
-
-/* ======= PROFILE ======= */
-.profile-card {
-  background: #ffffff;
-  padding: 25px;
-  border-radius: 12px;
-  width: 320px;
-  text-align: center;
-  border: 2px solid #000000;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-.profile-card img {
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border: 3px solid #000000;
-  margin-bottom: 10px;
-}
-
-.profile-card input {
-  margin-top: 10px;
-}
-
 .hidden {
-  display: none;
+  display: none !important;
 }
 
-/* ======= SECTION ======= */
-.section {
-  display: none;
-  animation: fadeIn 0.4s ease;
-}
-
-.section.active {
-  display: block;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ======= FOOTER ======= */
-footer {
-  background-color: #000000;
-  color: white;
-  text-align: center;
-  padding: 12px;
-  border-radius: 8px;
-  margin-top: 30px;
-  font-size: 14px;
-}
-
-/* ======= AUTH (LOGIN/SIGNUP) ======= */
 .auth-body {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: #000000;
+  background: #000;
   color: white;
 }
 
 .auth-container {
-  background: #ffffff;
-  color: #000000;
+  background: #fff;
+  color: #000;
   padding: 40px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   width: 320px;
   text-align: center;
 }
 
-.auth-container input,
-.auth-container button {
+.auth-container input {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
   border-radius: 5px;
-  border: 1px solid #000000;
+  border: 1px solid #000;
 }
 
 .auth-container button {
-  background-color: #000000;
-  color: white;
+  width: 100%;
+  padding: 10px;
+  background-color: #000;
+  color: #fff;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
 }
 
 .auth-container button:hover {
-  background-color: #ffffff;
-  color: #000000;
-  border: 2px solid #000000;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  background: #fff;
+  color: #000;
+  border: 2px solid #000;
 }
 
-/* ======= DARK MODE ======= */
-body.dark {
-  background-color: #000000;
-  color: #ffffff;
-}
-
-body.dark .sidebar {
-  background-color: #ffffff;
-  color: #000000;
-}
-
-body.dark .sidebar nav ul li a {
-  color: #000000;
-}
-
-body.dark .sidebar nav ul li.active a,
-body.dark .sidebar nav ul li a:hover {
-  background-color: #000000;
-  color: #ffffff;
-}
-
-body.dark header,
-body.dark footer {
-  background-color: #ffffff;
-  color: #000000;
-}
-
-body.dark .card,
-body.dark .profile-card,
-body.dark .announcements {
-  background-color: #000000;
-  color: #ffffff;
-  border-color: #ffffff;
-}
-
-body.dark table thead {
-  background: #ffffff;
-  color: #000000;
-}
-
-body.dark tbody tr:nth-child(even) {
-  background-color: #222;
-}
-
-body.dark tbody tr:hover {
-  background-color: #333;
-}
-
-body.dark button {
-  background-color: #ffffff;
-  color: #000000;
-  border: 2px solid #ffffff;
-}
-
-body.dark button:hover {
-  background-color: #000000;
-  color: #ffffff;
-  border-color: #000000;
+.auth-container a {
+  color: #000;
+  text-decoration: none;
 }
