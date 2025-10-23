@@ -56,6 +56,8 @@
             <li><a href="#" onclick="showSection('grades')">📄 Grades & Records</a></li>
             <li><a href="#" onclick="showSection('requirements')">📎 Requirements</a></li>
             <li><a href="#" onclick="showSection('payments')">💰 Account & Payments</a></li>
+            <li><a href="#" onclick="showSection('enrollment')">🧾 Enrollment</a></li>
+            <li><a href="#" onclick="showSection('store')">🏫 University Store</a></li>
             <li><a href="#" onclick="showSection('clearance')">✅ Clearance</a></li>
             <li><a href="#" onclick="showSection('help')">🆘 Help & Support</a></li>
             <li><a href="#" onclick="showSection('feedback')">💬 Feedback</a></li>
@@ -70,19 +72,11 @@
             <img id="announcementImage" src="https://images.unsplash.com/photo-1581091215367-59ab6b6b76a9?auto=format&fit=crop&w=1000&q=60" alt="Announcements">
             <div class="overlay-text">Announcements</div>
           </div>
-          <div class="announcements">
-            <div class="card event">
-              <h3>📅 Midterm Exams</h3>
-              <p>Midterm exams will run from <strong>Nov 10–15, 2025</strong>.</p>
-            </div>
-            <div class="card event">
-              <h3>🎉 Foundation Week</h3>
-              <p>Celebrate our 50th Foundation Week starting <strong>Dec 1, 2025</strong>.</p>
-            </div>
-            <div class="card event">
-              <h3>💡 Career Orientation</h3>
-              <p>Join the IT Career Orientation on <strong>Nov 25, 2025</strong>.</p>
-            </div>
+          <div class="announcement-gallery">
+            <img src="https://images.unsplash.com/photo-1600195077913-8a9ed3f5c2d2?auto=format&fit=crop&w=1000&q=60" alt="Exam Schedule">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1000&q=60" alt="School Program">
+            <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=1000&q=60" alt="Campus Event">
+            <img src="https://images.unsplash.com/photo-1600566752839-69e930121e2b?auto=format&fit=crop&w=1000&q=60" alt="Orientation">
           </div>
         </section>
 
@@ -152,10 +146,43 @@
 
         <section id="payments" class="section">
           <h2>Account & Payments</h2>
+          <div class="payment-list">
+            <div class="card"><h3>Tuition Fee (Installment 2/4)</h3><p>Due: Nov 25, 2025</p><p>Balance: ₱5,000</p><button>Pay Now</button></div>
+            <div class="card"><h3>Uniform Fee</h3><p>Due: Oct 30, 2025</p><p>Balance: ₱1,200</p><button>Pay Now</button></div>
+            <div class="card"><h3>Educational Tour</h3><p>Due: Dec 5, 2025</p><p>Balance: ₱2,500</p><button>Pay Now</button></div>
+            <div class="card"><h3>Event Fee (Foundation Week)</h3><p>Due: Nov 15, 2025</p><p>Balance: ₱500</p><button>Pay Now</button></div>
+            <div class="card total"><strong>Total Outstanding Balance:</strong> ₱9,200</div>
+          </div>
+        </section>
+
+        <section id="enrollment" class="section">
+          <h2>Enrollment</h2>
           <div class="card">
-            <h3>Outstanding Balance: ₱3,200</h3>
-            <button>Pay Now</button>
-            <p>Last Payment: Feb 15, 2025</p>
+            <p><strong>Enrollment Status:</strong> Open for 2nd Semester 2025</p>
+            <p><strong>Deadline:</strong> November 30, 2025</p>
+            <p><strong>Requirements:</strong> Clearance, Payment Receipt, Adviser Approval</p>
+            <button>Proceed to Enroll</button>
+          </div>
+          <div class="card">
+            <h3>Enrollment Steps</h3>
+            <ol>
+              <li>Update your profile information</li>
+              <li>Submit pending requirements</li>
+              <li>Pay your outstanding balances</li>
+              <li>Wait for adviser approval</li>
+              <li>Print your enrollment form</li>
+            </ol>
+          </div>
+        </section>
+
+        <section id="store" class="section">
+          <h2>University Store</h2>
+          <div class="store-grid">
+            <div class="item"><img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=60"><h3>University T-Shirt</h3><p>₱500</p><button>Add to Cart</button></div>
+            <div class="item"><img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?auto=format&fit=crop&w=600&q=60"><h3>University Jacket</h3><p>₱1,200</p><button>Add to Cart</button></div>
+            <div class="item"><img src="https://images.unsplash.com/photo-1539910741010-0eec2bfb4939?auto=format&fit=crop&w=600&q=60"><h3>PE Jersey</h3><p>₱700</p><button>Add to Cart</button></div>
+            <div class="item"><img src="https://images.unsplash.com/photo-1601924582971-c9a7f2df8a9f?auto=format&fit=crop&w=600&q=60"><h3>University Hoodie</h3><p>₱1,000</p><button>Add to Cart</button></div>
+            <div class="item"><img src="https://images.unsplash.com/photo-1533237261546-a4a372b804c7?auto=format&fit=crop&w=600&q=60"><h3>University Cap</h3><p>₱350</p><button>Add to Cart</button></div>
           </div>
         </section>
 
@@ -170,10 +197,7 @@
 
         <section id="help" class="section">
           <h2>Help & Support</h2>
-          <div class="card">
-            <p>📧 support@sis.edu.ph</p>
-            <p>🕐 Mon–Fri, 8AM–5PM</p>
-          </div>
+          <div class="card"><p>📧 support@sis.edu.ph</p><p>🕐 Mon–Fri, 8AM–5PM</p></div>
         </section>
 
         <section id="feedback" class="section">
