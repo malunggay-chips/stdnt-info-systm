@@ -16,6 +16,7 @@ loginForm.querySelector("form").onsubmit=e=>{
   e.preventDefault();
   loginForm.classList.add("hidden");
   portal.classList.remove("hidden");
+  document.querySelector("header.portal-header").style.display="block";
 };
 
 document.getElementById("logout-btn").onclick=()=>{portal.classList.add("hidden");auth.classList.remove("hidden");};
@@ -33,7 +34,5 @@ links.forEach(link=>{
     if(window.innerWidth<=900){document.getElementById("sidebar").classList.remove("active");}
   };
 });
-
-document.getElementById("menu-toggle").onclick=()=>{document.getElementById("sidebar").classList.toggle("active");};
 
 document.getElementById("theme-toggle").onchange=()=>{document.body.classList.toggle("dark");};
