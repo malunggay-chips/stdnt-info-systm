@@ -1,96 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Student Information System</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- === AUTHENTICATION AREA === -->
-  <section id="auth-section" class="auth-body">
+  <section id="auth-section">
     <div class="auth-container" id="authChoice">
-      <h2>Welcome to Student Portal</h2>
-      <p>Select an option:</p>
-      <button id="loginChoice">Login</button>
-      <button id="signupChoice">Sign Up</button>
+      <h1>Student Information System</h1>
+      <div class="auth-buttons">
+        <button id="loginChoice">Log In</button>
+        <button id="signupChoice">Sign Up</button>
+      </div>
     </div>
 
-    <!-- SIGNUP FORM -->
     <div class="auth-container hidden" id="signupForm">
       <h2>Create Account</h2>
-      <input type="text" id="signupName" placeholder="Full Name" required />
-      <input type="email" id="signupEmail" placeholder="Email" required />
-      <input type="password" id="signupPassword" placeholder="Password" required />
+      <input type="text" id="signupName" placeholder="Full Name" required>
+      <input type="email" id="signupEmail" placeholder="Email" required>
+      <input type="password" id="signupPassword" placeholder="Password" required>
       <button id="signupBtn">Sign Up</button>
-      <p><a href="#" id="backToMain1">⬅ Back</a></p>
+      <button class="back" id="backToMain1">Back</button>
     </div>
 
-    <!-- LOGIN FORM -->
     <div class="auth-container hidden" id="loginForm">
-      <h2>Login to Student Portal</h2>
-      <input type="text" id="loginStudentNo" placeholder="Student Number" required />
-      <input type="email" id="loginEmail" placeholder="Email" required />
-      <input type="password" id="loginPassword" placeholder="Password" required />
-      <button id="loginBtn">Login</button>
-      <p><a href="#" id="backToMain2">⬅ Back</a></p>
+      <h2>Log In</h2>
+      <input type="text" id="loginStudentNo" placeholder="Student Number" required>
+      <input type="email" id="loginEmail" placeholder="Email" required>
+      <input type="password" id="loginPassword" placeholder="Password" required>
+      <button id="loginBtn">Log In</button>
+      <button class="back" id="backToMain2">Back</button>
     </div>
   </section>
 
-  <!-- === STUDENT PORTAL === -->
-  <div id="portal" class="hidden">
+  <section id="portal" class="hidden">
+    <header>
+      <h1>Student Information System</h1>
+      <div class="user-info">
+        <span id="studentName"></span>
+        <button id="logoutBtn">Logout</button>
+      </div>
+    </header>
+
     <div class="container">
       <aside class="sidebar">
-        <h2>Student Portal</h2>
+        <h2>Navigation</h2>
         <nav>
           <ul>
             <li class="active"><a href="#" onclick="showSection('dashboard')">📊 Dashboard</a></li>
-            <li><a href="#" onclick="showSection('profile')">👤 Profile</a></li>
+            <li><a href="#" onclick="showSection('profile')">👤 Student Profile</a></li>
             <li><a href="#" onclick="showSection('subjects')">📘 Subjects</a></li>
+            <li><a href="#" onclick="showSection('schedule')">🕒 Class Schedule</a></li>
+            <li><a href="#" onclick="showSection('grades')">📄 Grades & Records</a></li>
+            <li><a href="#" onclick="showSection('requirements')">📎 Requirements</a></li>
+            <li><a href="#" onclick="showSection('payments')">💰 Account & Payments</a></li>
+            <li><a href="#" onclick="showSection('clearance')">✅ Clearance</a></li>
+            <li><a href="#" onclick="showSection('help')">🆘 Help & Support</a></li>
+            <li><a href="#" onclick="showSection('feedback')">💬 Feedback</a></li>
+            <li><a href="#" onclick="showSection('settings')">⚙️ Settings</a></li>
           </ul>
         </nav>
       </aside>
 
       <main class="main-content">
-        <header>
-          <div class="student-info">
-            <h3 id="studentName">Student Name</h3>
-            <p>BS Information Technology - Fourth Year</p>
-          </div>
-          <div>
-            <button id="toggle-theme">🌙</button>
-            <button id="logoutBtn">Logout</button>
-          </div>
-        </header>
-
         <section id="dashboard" class="section active">
-          <h2>📊 Dashboard</h2>
-          <p>Welcome to your student portal. This is a simulated login system with no database.</p>
+          <h2>Dashboard</h2>
+          <p>Welcome to your Student Information System dashboard.</p>
         </section>
 
         <section id="profile" class="section">
-          <h2>👤 Profile</h2>
-          <p><strong>Name:</strong> <span id="profileName">John Doe</span></p>
-          <p><strong>Email:</strong> johndoe@email.com</p>
-          <p><strong>Student Number:</strong> 2021-12345</p>
+          <h2>Student Profile</h2>
+          <p>Name: <span id="profileName">N/A</span></p>
+          <p>Email: student@email.com</p>
+          <p>Course: Bachelor of Science in Information Technology</p>
         </section>
 
         <section id="subjects" class="section">
-          <h2>📘 Subjects</h2>
+          <h2>Subjects</h2>
           <ul>
             <li>Web Development</li>
             <li>Database Systems</li>
             <li>Information Security</li>
+            <li>Human-Computer Interaction</li>
           </ul>
         </section>
 
-        <footer>
-          <p>© 2025 Student Portal | Stormtrooper Edition ⚫⚪</p>
-        </footer>
+        <section id="schedule" class="section">
+          <h2>Class Schedule</h2>
+          <table>
+            <tr><th>Subject</th><th>Day</th><th>Time</th></tr>
+            <tr><td>Web Development</td><td>Mon/Wed</td><td>9:00AM - 10:30AM</td></tr>
+            <tr><td>Database Systems</td><td>Tue/Thu</td><td>1:00PM - 2:30PM</td></tr>
+          </table>
+        </section>
+
+        <section id="grades" class="section">
+          <h2>Grades & Records</h2>
+          <p>GPA: <strong>1.75</strong></p>
+        </section>
+
+        <section id="requirements" class="section">
+          <h2>Requirements</h2>
+          <ul>
+            <li>Form 137 - Submitted</li>
+            <li>Good Moral - Submitted</li>
+            <li>Medical Clearance - Pending</li>
+          </ul>
+        </section>
+
+        <section id="payments" class="section">
+          <h2>Account & Payments</h2>
+          <p>Outstanding Balance: ₱3,200</p>
+          <button>Pay Now</button>
+        </section>
+
+        <section id="clearance" class="section">
+          <h2>Clearance</h2>
+          <p>Status: Pending from Accounting</p>
+        </section>
+
+        <section id="help" class="section">
+          <h2>Help & Support</h2>
+          <p>For assistance, contact: <strong>support@sis.edu.ph</strong></p>
+        </section>
+
+        <section id="feedback" class="section">
+          <h2>Feedback</h2>
+          <textarea placeholder="Write your feedback here..."></textarea>
+          <button>Submit</button>
+        </section>
+
+        <section id="settings" class="section">
+          <h2>Settings</h2>
+          <button id="toggle-theme">🌙</button>
+        </section>
       </main>
     </div>
-  </div>
+
+    <footer>
+      <p>© 2025 Student Information System. All rights reserved.</p>
+    </footer>
+  </section>
 
   <script src="script.js"></script>
 </body>
