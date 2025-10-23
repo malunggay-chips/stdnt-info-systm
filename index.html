@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Student Information System</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <section id="auth-section">
@@ -18,18 +18,18 @@
 
     <div class="auth-container hidden" id="signupForm">
       <h2>Create Account</h2>
-      <input type="text" id="signupName" placeholder="Full Name" required>
-      <input type="email" id="signupEmail" placeholder="Email" required>
-      <input type="password" id="signupPassword" placeholder="Password" required>
+      <input type="text" id="signupName" placeholder="Full Name" required />
+      <input type="email" id="signupEmail" placeholder="Email" required />
+      <input type="password" id="signupPassword" placeholder="Password" required />
       <button id="signupBtn">Sign Up</button>
       <button class="back" id="backToMain1">Back</button>
     </div>
 
     <div class="auth-container hidden" id="loginForm">
       <h2>Log In</h2>
-      <input type="text" id="loginStudentNo" placeholder="Student Number" required>
-      <input type="email" id="loginEmail" placeholder="Email" required>
-      <input type="password" id="loginPassword" placeholder="Password" required>
+      <input type="text" id="loginStudentNo" placeholder="Student Number" required />
+      <input type="email" id="loginEmail" placeholder="Email" required />
+      <input type="password" id="loginPassword" placeholder="Password" required />
       <button id="loginBtn">Log In</button>
       <button class="back" id="backToMain2">Back</button>
     </div>
@@ -67,63 +67,92 @@
       <main class="main-content">
         <section id="dashboard" class="section active">
           <h2>Dashboard</h2>
-          <p>Welcome to your Student Information System dashboard.</p>
+          <div class="card">
+            <h3>Current Semester Overview</h3>
+            <p><strong>Enrolled Subjects:</strong> 5</p>
+            <p><strong>Average Grade:</strong> 1.75</p>
+            <p><strong>Account Balance:</strong> ₱3,200</p>
+            <p><strong>Status:</strong> Regular</p>
+          </div>
         </section>
 
         <section id="profile" class="section">
           <h2>Student Profile</h2>
-          <p>Name: <span id="profileName">N/A</span></p>
-          <p>Email: student@email.com</p>
-          <p>Course: Bachelor of Science in Information Technology</p>
+          <div class="card">
+            <p><strong>Name:</strong> <span id="profileName">N/A</span></p>
+            <p><strong>Student Number:</strong> 2025-00123</p>
+            <p><strong>Course:</strong> BS Information Technology</p>
+            <p><strong>Year Level:</strong> 3rd Year</p>
+            <p><strong>Email:</strong> student@email.com</p>
+            <p><strong>Contact:</strong> 09123456789</p>
+          </div>
         </section>
 
         <section id="subjects" class="section">
           <h2>Subjects</h2>
-          <ul>
-            <li>Web Development</li>
-            <li>Database Systems</li>
-            <li>Information Security</li>
-            <li>Human-Computer Interaction</li>
-          </ul>
+          <table>
+            <tr><th>Subject Code</th><th>Subject Name</th><th>Units</th></tr>
+            <tr><td>IT 301</td><td>Web Development</td><td>3</td></tr>
+            <tr><td>IT 302</td><td>Database Systems</td><td>3</td></tr>
+            <tr><td>IT 303</td><td>Information Security</td><td>3</td></tr>
+            <tr><td>IT 304</td><td>Human-Computer Interaction</td><td>2</td></tr>
+            <tr><td>IT 305</td><td>System Analysis & Design</td><td>3</td></tr>
+          </table>
         </section>
 
         <section id="schedule" class="section">
           <h2>Class Schedule</h2>
           <table>
-            <tr><th>Subject</th><th>Day</th><th>Time</th></tr>
-            <tr><td>Web Development</td><td>Mon/Wed</td><td>9:00AM - 10:30AM</td></tr>
-            <tr><td>Database Systems</td><td>Tue/Thu</td><td>1:00PM - 2:30PM</td></tr>
+            <tr><th>Subject</th><th>Day</th><th>Time</th><th>Room</th></tr>
+            <tr><td>Web Development</td><td>Mon/Wed</td><td>9:00AM - 10:30AM</td><td>IT-201</td></tr>
+            <tr><td>Database Systems</td><td>Tue/Thu</td><td>1:00PM - 2:30PM</td><td>IT-305</td></tr>
+            <tr><td>Information Security</td><td>Fri</td><td>8:00AM - 11:00AM</td><td>Lab 1</td></tr>
           </table>
         </section>
 
         <section id="grades" class="section">
           <h2>Grades & Records</h2>
-          <p>GPA: <strong>1.75</strong></p>
+          <table>
+            <tr><th>Subject</th><th>Midterm</th><th>Final</th><th>Average</th></tr>
+            <tr><td>Web Development</td><td>1.75</td><td>1.50</td><td>1.63</td></tr>
+            <tr><td>Database Systems</td><td>2.00</td><td>1.75</td><td>1.88</td></tr>
+            <tr><td>Information Security</td><td>1.75</td><td>1.50</td><td>1.63</td></tr>
+          </table>
+          <p><strong>GPA:</strong> 1.71</p>
         </section>
 
         <section id="requirements" class="section">
           <h2>Requirements</h2>
           <ul>
-            <li>Form 137 - Submitted</li>
-            <li>Good Moral - Submitted</li>
-            <li>Medical Clearance - Pending</li>
+            <li>Form 137 - ✅ Submitted</li>
+            <li>Good Moral Certificate - ✅ Submitted</li>
+            <li>Medical Clearance - ⏳ Pending</li>
+            <li>Library Clearance - ✅ Submitted</li>
           </ul>
         </section>
 
         <section id="payments" class="section">
           <h2>Account & Payments</h2>
-          <p>Outstanding Balance: ₱3,200</p>
-          <button>Pay Now</button>
+          <div class="card">
+            <p><strong>Outstanding Balance:</strong> ₱3,200</p>
+            <button>Pay Now</button>
+            <p>Last Payment Date: February 15, 2025</p>
+          </div>
         </section>
 
         <section id="clearance" class="section">
           <h2>Clearance</h2>
-          <p>Status: Pending from Accounting</p>
+          <ul>
+            <li>Library Department - ✅ Cleared</li>
+            <li>Accounting Department - ⏳ Pending</li>
+            <li>Registrar - ✅ Cleared</li>
+          </ul>
         </section>
 
         <section id="help" class="section">
           <h2>Help & Support</h2>
           <p>For assistance, contact: <strong>support@sis.edu.ph</strong></p>
+          <p>Office Hours: Monday to Friday, 8:00 AM - 5:00 PM</p>
         </section>
 
         <section id="feedback" class="section">
