@@ -4,7 +4,7 @@ const signupForm = document.getElementById('signupForm');
 const loginForm = document.getElementById('loginForm');
 const portal = document.getElementById('portal');
 
-// === Buttons ===
+// === AUTH BUTTONS ===
 document.getElementById('signupChoice').addEventListener('click', () => {
   authChoice.classList.add('hidden');
   signupForm.classList.remove('hidden');
@@ -25,7 +25,7 @@ document.getElementById('backToMain2').addEventListener('click', () => {
   authChoice.classList.remove('hidden');
 });
 
-// === Sign Up Simulation ===
+// === SIGN UP SIMULATION ===
 document.getElementById('signupBtn').addEventListener('click', () => {
   const name = document.getElementById('signupName').value;
   const email = document.getElementById('signupEmail').value;
@@ -41,7 +41,7 @@ document.getElementById('signupBtn').addEventListener('click', () => {
   authChoice.classList.remove('hidden');
 });
 
-// === Login Simulation ===
+// === LOGIN SIMULATION ===
 document.getElementById('loginBtn').addEventListener('click', () => {
   const studentNo = document.getElementById('loginStudentNo').value;
   const email = document.getElementById('loginEmail').value;
@@ -59,14 +59,21 @@ document.getElementById('loginBtn').addEventListener('click', () => {
   document.getElementById('profileName').textContent = "Student #" + studentNo;
 });
 
-// === Logout ===
+// === LOGOUT FIX ===
 document.getElementById('logoutBtn').addEventListener('click', () => {
+  // Hide portal
   portal.classList.add('hidden');
+
+  // Show main auth page only
   document.getElementById('auth-section').classList.remove('hidden');
   authChoice.classList.remove('hidden');
+
+  // Hide all other auth forms to avoid overlap
+  loginForm.classList.add('hidden');
+  signupForm.classList.add('hidden');
 });
 
-// === Navigation ===
+// === NAVIGATION LOGIC ===
 function showSection(id) {
   document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
   document.getElementById(id).classList.add('active');
@@ -77,7 +84,7 @@ function showSection(id) {
   if (clicked) clicked.classList.add('active');
 }
 
-// === Theme Toggle ===
+// === THEME TOGGLE ===
 const themeBtn = document.getElementById('toggle-theme');
 if (themeBtn) {
   themeBtn.addEventListener('click', () => {
